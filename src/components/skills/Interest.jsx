@@ -24,10 +24,10 @@ export default function Interest() {
             initiallyVisible={true}
           > */}
         <div className={classes.web}>
-          <h3>APP Develpoment</h3>
+          <h3>Programming Knowledge</h3>
           <p>
-            I have knowledge of flutter development and have experience in building android and IOS
-            applications. I also have live projects published on Google Play Store.
+            I have a solid foundation in programming and have worked with languages like  
+            <b>C#, PHP, Python, Java, and JavaScript</b>.  
           </p>
         </div>
         {/* </ScrollAnimation>
@@ -41,9 +41,8 @@ export default function Interest() {
         <div className={classes.app}>
           <h3>Web Development</h3>
           <p>
-            Javascript/ Typescript, HTML/ CSS, ReactJs, Next.js, Prisma, tRPC, ZOD, Redux, Tailwind
-            CSS, UI Libraries (React-Bootstrap, Mantine, MUI, Shadcn UI), Redux Toolkit, T3 Stack,
-            JEST, Drizzle, Unit Testing.
+             HTML/ CSS, ReactJs, Tailwind
+            CSS,ASP.NET MVC,Bootstrap
           </p>
         </div>
         {/* </ScrollAnimation>
@@ -55,10 +54,9 @@ export default function Interest() {
             initiallyVisible={true}
           > */}
         <div className={classes.other}>
-          <h3>Expanded Expertise</h3>
+          <h3>Database Management</h3>
           <p>
-            AWS, Docker, GitHub, Frontend System Design, Express.js, Node.js, MongoDB, MERN Stack,
-            SQL, NOSQL, Socket.io, jQuery, Open to Monorepo architecture, Open Source Contribution, Learning Web3
+            SQl, Entity Framework, LINQ, MySQL 
           </p>
         </div>
         {/* </ScrollAnimation> */}

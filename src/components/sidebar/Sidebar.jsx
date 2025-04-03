@@ -3,7 +3,7 @@ import './Sidebar.css';
 import { HashLink as Link } from 'react-router-hash-link';
 import { motion } from 'framer-motion';
 
-import logo from '../images/sam.png';
+import logo from '../images/Profile.jpg';
 import github from '../images/github.png';
 import instagram from '../images/instagram.png';
 import twitter from '../images/twitterx.png';
@@ -25,23 +25,16 @@ export default function Sidebar() {
   const iconList = [
     {
       component: github,
-      href: 'https://github.com/mittalsam98'
+      href: 'https://github.com/Frrz23'
     },
     {
       component: linkedin,
-      href: 'https://www.linkedin.com/in/sachin-mittal-476174158?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BoRhF2EUsQJ%2BygJpLEZb%2FFA%3D%3D'
+      href: 'https://www.linkedin.com/in/aryan-khatiwoda'
     },
-    {
-      component: twitter,
-      href: 'https://twitter.com/Sachin_Mittal98'
-    },
-    {
-      component: instagram,
-      href: 'https://www.instagram.com/decent_sachin.mittal'
-    },
+    
     {
       component: gmail,
-      href: 'mailto:mittalsam98@gmail.com'
+      href: 'mailto:aryankhatiwoda9@gmail.com'
     }
   ];
   const item = {
@@ -54,12 +47,12 @@ export default function Sidebar() {
 
   return (
     <div className='sidebar'>
-      <div className='topHashtag'># programmer_life</div>
+      <div className='topHashtag'># student_life</div>
       <div className='topHashtag'># hello_world</div>
       <div className='topHashtag'># coding</div>
       <h1>
         <Link smooth to='/#start' className='h1_links'>
-          Sachin Mittal
+          Aryan Khatiwada
         </Link>
       </h1>
       <motion.div
@@ -75,7 +68,7 @@ export default function Sidebar() {
           target='_blank'
           className='fa fa-envelope'
         ></a>
-        &nbsp;mittalsam98@gmail.com
+        &nbsp;aryankhatiwoda9@gmail.com
       </p>
 
       <ul className='sidebar-nav'>
@@ -116,24 +109,6 @@ export default function Sidebar() {
           ))}
         </motion.ul>
       </div>
-      <div
-        style={{
-          color: 'black',
-          fontWeight: 'bold',
-          paddingTop: '20%'
-        }}
-        className='tagtop'
-      >
-        Made with <a href='#' className='fa fa-heart heart'></a> by me.
-      </div>
-      <button
-        onClick={() => {
-          window.open('https://github.com/mittalsam98/react-portfolio', '_blank');
-        }}
-        className='templateTextBtn'
-      >
-        Use this template
-      </button>
     </div>
   );
 }

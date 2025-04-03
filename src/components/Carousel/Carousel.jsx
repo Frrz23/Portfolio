@@ -27,7 +27,7 @@ export default function CarouselImage() {
         <div>
           <img className={classes.image} src={Hello} alt='myImage' />
           <div className={classes.h1}>
-            I'm Sachin
+            I'm Aryan
             <motion.h1
               initial={{ scale: 1 }}
               animate={{ scale: [1, 1.2, 1] }} // Define the scale values for the bouncing effect
@@ -37,7 +37,7 @@ export default function CarouselImage() {
               }}
             >
               <a
-                href='https://drive.google.com/file/d/1X-i5HA9SzKKnNHCFcupGxq_RFu7fwcil/view?usp=drive_link'
+                href='https://drive.google.com/file/d/1Ae9ZaV4uWHWcneiY5ElrRF036NBTw09i/view?usp=sharing'
                 rel='opener noreferrer'
                 target='_blank'
               >
@@ -52,21 +52,12 @@ export default function CarouselImage() {
             <h1> I love building</h1>
             <h1>THINGS!!</h1>
             <a
-              href='https://github.com/mittalsam98?tab=repositories&q=&type=public&language=&sort='
+              href='https://github.com/Frrz23?tab=repositories'
               rel='opener noreferrer'
               target='_blank'
             >
               VIEW Web PROJECTS <GoProject />
             </a>
-            <div className={classes.secondButton}>
-              <a
-                href='https://github.com/mittalsam98?tab=repositories&q=&type=&language=dart&sort='
-                rel='opener noreferrer'
-                target='_blank'
-              >
-                VIEW ANDROID PROJECTS <GoProject />
-              </a>
-            </div>
           </div>
         </div>
       </Carousel>
