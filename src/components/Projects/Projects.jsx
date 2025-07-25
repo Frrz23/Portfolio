@@ -17,6 +17,7 @@ import courseApp from '../images/courseApp.png';
 import chatGPT from '../images/chatGPT.png';
 import Futsal from '../images/Futsal.png';
 import github from '../images/github.png';
+import AssetHub from '../images/AssetHub.png';
 import frontenddev from '../images/frontenddev.png';
 import solanaaid from '../images/solanaaid.png';
 import jumpstart from '../images/jumpstart.png';
@@ -49,6 +50,15 @@ const webItem = [
     image: Futsal,
     color: '#d5ebda',
     githubLink: 'https://github.com/MiniEnemy/Futsal-Website'
+  },
+  {
+    link: 'https://github.com/Frrz23/AssetHub-Frontend',
+    title: 'AssetHub - Asset Management System',
+    techStack: 'Tech Stack: ASP.NET Core (ABP), React.js, Tailwind CSS, EF Core',
+    desc: 'AssetHub is a full-featured asset management system with Excel support, approval flows, audit logging, dashboard analytics, and email notifications.',
+    image: AssetHub, // Replace with AssetHub thumbnail if you have one
+    color: '#fff3c7',
+    githubLink: 'https://github.com/Frrz23/AssetHub-Backend'
   }
 ];
 

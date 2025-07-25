@@ -59,6 +59,26 @@ export default function Interest() {
             SQl, Entity Framework, LINQ, MySQL 
           </p>
         </div>
+        <div className={classes.other}>
+  <h3>Frameworks & Libraries</h3>
+  <p>
+    ASP.NET Core (ABP), React.js, jQuery, Tailwind CSS, Bootstrap, NPOI, MailKit
+  </p>
+</div>
+<div className={classes.other}>
+  <h3>Software Architecture</h3>
+  <p>
+    Layered Architecture, Repository Pattern, Background Jobs, RESTful APIs, Modular Monolith, Retry Policies, Timezone-aware systems
+  </p>
+</div>
+<div className={classes.other}>
+  <h3>Tools & DevOps</h3>
+  <p>
+    Git, GitHub, Postman, Swagger, Visual Studio, VS Code
+  </p>
+</div>
+
+
         {/* </ScrollAnimation> */}
       </div>
       {/* </ScrollAnimation> */}
