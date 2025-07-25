@@ -26,8 +26,8 @@ export default function Interest() {
         <div className={classes.web}>
           <h3>Programming Knowledge</h3>
           <p>
-            I have a solid foundation in programming and have worked with languages like  
-            <b>C#, PHP, Python, Java, and JavaScript</b>.  
+            I have a solid foundation in programming and have worked with languages like
+            <b>C#, PHP, Python, Java, and JavaScript</b>.
           </p>
         </div>
         {/* </ScrollAnimation>
@@ -40,10 +40,7 @@ export default function Interest() {
           > */}
         <div className={classes.app}>
           <h3>Web Development</h3>
-          <p>
-             HTML/ CSS, ReactJs, Tailwind
-            CSS,ASP.NET MVC,Bootstrap
-          </p>
+          <p>HTML/ CSS, ReactJs, Tailwind CSS,ASP.NET MVC,Bootstrap</p>
         </div>
         {/* </ScrollAnimation>
           <ScrollAnimation
@@ -55,29 +52,16 @@ export default function Interest() {
           > */}
         <div className={classes.other}>
           <h3>Database Management</h3>
-          <p>
-            SQl, Entity Framework, LINQ, MySQL 
-          </p>
+          <p>SQl, Entity Framework, LINQ, MySQL</p>
         </div>
         <div className={classes.other}>
-  <h3>Frameworks & Libraries</h3>
-  <p>
-    ASP.NET Core (ABP), React.js, jQuery, Tailwind CSS, Bootstrap, NPOI, MailKit
-  </p>
-</div>
-<div className={classes.other}>
-  <h3>Software Architecture</h3>
-  <p>
-    Layered Architecture, Repository Pattern, Background Jobs, RESTful APIs, Modular Monolith, Retry Policies, Timezone-aware systems
-  </p>
-</div>
-<div className={classes.other}>
-  <h3>Tools & DevOps</h3>
-  <p>
-    Git, GitHub, Postman, Swagger, Visual Studio, VS Code
-  </p>
-</div>
-
+          <h3>Frameworks & Libraries</h3>
+          <p>ASP.NET Core (ABP), React.js, jQuery, Tailwind CSS, Bootstrap, NPOI, MailKit</p>
+        </div>
+        <div className={classes.other}>
+          <h3>Tools & DevOps</h3>
+          <p>Git, GitHub, Postman, Swagger, Visual Studio, VS Code</p>
+        </div>
 
         {/* </ScrollAnimation> */}
       </div>
