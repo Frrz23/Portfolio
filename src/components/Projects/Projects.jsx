@@ -56,23 +56,20 @@ const webItem = [
     title: 'AssetHub - Asset Management System',
     techStack: 'Tech Stack: ASP.NET Core (ABP), React.js, Tailwind CSS, EF Core',
     desc: 'AssetHub is a full-featured asset management system with Excel support, approval flows, audit logging, dashboard analytics, and email notifications.',
-    image: AssetHub, 
+    image: AssetHub,
     color: '#fff3c7',
     githubLink: 'https://github.com/Frrz23/AssetHub-Backend'
   },
   {
-  link: 'https://github.com/Frrz23/TrashTrack', 
-  title: 'TrashTrack - Smart Waste Management System',
-  techStack: 'Tech Stack: ASP.NET Core MVC, Razor Pages, SQL Server, ASP.NET Identity, Bootstrap',
-  desc: 'TrashTrack is a municipal waste tracking system that provides real-time pickup schedule visibility, issue reporting, and admin overrides to improve coordination between the public and garbage collectors.',
-  image: TrashTrack, 
-  color: '#d9f1ff',
-  githubLink: 'https://github.com/MiniEnemy/Trash-Track-' 
-}
-
+    link: 'https://github.com/MiniEnemy/Trash-Track',
+    title: 'TrashTrack - Smart Waste Management System',
+    techStack: 'Tech Stack: ASP.NET Core MVC, Razor Pages, SQL Server, ASP.NET Identity, Bootstrap',
+    desc: 'TrashTrack is a municipal waste tracking system that provides real-time pickup schedule visibility, issue reporting, and admin overrides to improve coordination between the public and garbage collectors.',
+    image: TrashTrack,
+    color: '#d9f1ff',
+    githubLink: 'https://github.com/MiniEnemy/Trash-Track'
+  }
 ];
-
-
 
 export default function Projects() {
   const getProjectCard = (cardItem) => {
@@ -112,7 +109,7 @@ export default function Projects() {
           return getProjectCard(item);
         })}
       </ul>
-      
+
       {/* </ScrollAnimation> */}
     </div>
   );
