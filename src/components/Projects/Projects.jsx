@@ -52,7 +52,7 @@ const webItem = [
     githubLink: 'https://github.com/MiniEnemy/Futsal-Website'
   },
   {
-    link: 'https://github.com/Frrz23/AssetHub-Frontend',
+    link: 'https://github.com/Frrz23/AssetHub-Fronted',
     title: 'AssetHub - Asset Management System',
     techStack: 'Tech Stack: ASP.NET Core (ABP), React.js, Tailwind CSS, EF Core',
     desc: 'AssetHub is a full-featured asset management system with Excel support, approval flows, audit logging, dashboard analytics, and email notifications.',
