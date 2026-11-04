@@ -18,13 +18,14 @@ class About extends Component {
         <h2 className={classes.heading}>Who Am I?</h2>
         <div className={classes.About}>
           <p>
-            Hi! My name is <b>Aryan Khatiwada</b>. I am a passionate developer having experience in{' '}
-            <b>Frontend development</b> & <b>Backend development </b> I thrive on building dynamic and user-friendly digital experiences, 
-            leveraging modern frameworks like React.js and ASP.NET MVC. With a keen eye for detail and a love for problem-solving, 
-            I enjoy developing innovative solutions that enhance user experiences.
+            Hi! My name is <b>Aryan Khatiwada</b>. I am an <b>Associate Software Engineer</b> and a
+            BCA graduate with professional experience building <b>REST APIs</b> and{' '}
+            <b>full-stack applications</b> with <b>C#</b>, <b>ASP.NET Core</b>, <b>React.js</b>, and{' '}
+            <b>SQL Server</b>. I love working on real-time systems (<b>SignalR</b>, <b>WebSockets</b>),
+            background jobs, and role-based access control, shipping features with Agile teams.
           </p>
           <p className={classes.br}>
-          From crafting seamless web applications to optimizing backend systems, I’m always excited to explore new technologies and bring creative ideas to life. Let's build something amazing together! 
+          From designing backend services and tuning performance to crafting smooth user interfaces, I enjoy turning ideas into reliable, production-ready software. Let's build something amazing together!
           </p>
         </div>
         {/* </ScrollAnimation> */}

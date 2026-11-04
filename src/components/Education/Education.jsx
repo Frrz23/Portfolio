@@ -6,6 +6,7 @@ import { MdSchool } from 'react-icons/md';
 import { MdWork } from 'react-icons/md';
 import { FaSchool } from 'react-icons/fa';
 import { FaUserGraduate } from "react-icons/fa";
+import { FaTrophy } from "react-icons/fa";
 
 
 
@@ -61,11 +62,11 @@ class Education extends Component {
                     </div>
                     <div className={classes.label}>
                       <h2>
-                        Higher School Diploma <span>2019-2021</span>
+                        High School Diploma — Computer Science <span>2019-2021</span>
                       </h2>
                       <div className={classes.description}>
-                        I have completed my higher education from Trinity Collage with major subjects as
-                        Physics,Chemistry & Maths with 85% in NEB board.{' '}
+                        I completed my high school diploma from <b>Trinity College</b> with
+                        Computer Science as my major subject, from July 2019 to December 2021.{' '}
                       </div>
                     </div>
                   </article>
@@ -78,13 +79,37 @@ class Education extends Component {
                       animateOnce={true}
                       initiallyVisible={true}
                     > */}
-                  <article>
-                    <div className={`${classes.timeline_icon} ${classes.timeline_icon_4}`}>
+                  <article className={classes.timeline_entry}>
+                    <div className={classes.timeline_icon}>
                       <FaUserGraduate/>
                     </div>
                     <div className={classes.label}>
-                      <h2>Bachelor In Computer Application <span>2021-Present</span></h2>
-                      <div className={classes.description}>Currently pursuing my Bachelor's degree at <b>Bernhardt College, Tribhuvan University</b></div>
+                      <h2>Bachelor In Computer Application <span>2021-2026</span></h2>
+                      <div className={classes.description}>Graduated with my Bachelor's degree from <b>Bernhardt College, Tribhuvan University</b> (April 2021 – April 2026), Kathmandu, Nepal.</div>
+                    </div>
+                  </article>
+                  <article className={classes.timeline_entry}>
+                    <div className={classes.timeline_icon}>
+                      <MdWork />
+                    </div>
+                    <div className={classes.label}>
+                      <h2>Intern → Associate Software Engineer — AMNIL Technologies <span>Sep 2025 – Apr 2026</span></h2>
+                      <div className={classes.description}>
+                        Designed and developed <b>RESTful APIs</b> with <b>ASP.NET Core</b> and C# for internal and client-facing applications. Modelled data with <b>SQL Server</b> and <b>Entity Framework Core</b>, built real-time features and background jobs, optimized backend performance, and shipped features with cross-functional teams using Git and Agile practices.
+                      </div>
+                    </div>
+                  </article>
+                  <article className={classes.timeline_entry}>
+                    <div className={`${classes.timeline_icon} ${classes.timeline_icon_4}`}>
+                      <FaTrophy />
+                    </div>
+                    <div className={classes.label}>
+                      <h2>Certifications &amp; Achievements</h2>
+                      <div className={classes.description}>
+                        <b>Foundational C# with Microsoft</b> — freeCodeCamp (Microsoft certified course)
+                        <br />
+                        <b>3rd Place — BernHack Hackathon</b> for the TrashTrack smart waste management system
+                      </div>
                     </div>
                     <div className={classes.timeline_entry_inner}>
                       <div className={classes.timeline_icon_3 || classes.color_none}></div>

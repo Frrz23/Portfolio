@@ -47,9 +47,9 @@ export default function Sidebar() {
 
   return (
     <div className='sidebar'>
-      <div className='topHashtag'># student_life</div>
-      <div className='topHashtag'># hello_world</div>
-      <div className='topHashtag'># coding</div>
+      <div className='topHashtag'># aspnet_core</div>
+      <div className='topHashtag'># react_js</div>
+      <div className='topHashtag'># real_time_systems</div>
       <h1>
         <Link smooth to='/#start' className='h1_links'>
           Aryan Khatiwada
@@ -69,6 +69,17 @@ export default function Sidebar() {
           className='fa fa-envelope'
         ></a>
         &nbsp;aryankhatiwoda9@gmail.com
+      </p>
+      <p style={{ color: 'black', fontWeight: 'bold' }} className='gmail'>
+        <a
+          href='tel:+9779818821006'
+          className='fa fa-phone'
+        ></a>
+        &nbsp;+977 9818821006
+      </p>
+      <p style={{ color: 'black', fontWeight: 'bold' }} className='gmail'>
+        <i className='fa fa-map-marker' style={{ marginLeft: '4px' }}></i>
+        &nbsp;Kathmandu, Nepal
       </p>
 
       <ul className='sidebar-nav'>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f1226"/>
+      <stop offset="55%" stop-color="#241a52"/>
+      <stop offset="100%" stop-color="#4a1d6e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff5f6d"/>
+      <stop offset="100%" stop-color="#ffc371"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="520" rx="21" fill="url(#bg)"/>
+  <circle cx="120" cy="90" r="60" fill="#ffffff" opacity="0.04"/>
+  <circle cx="690" cy="430" r="90" fill="#ffffff" opacity="0.05"/>
+  <path d="M4 300 L120 200 L230 290 L350 170 L470 260 L600 140 L796 260" stroke="url(#accent)" stroke-width="6" fill="none" opacity="0.9"/>
+  <path d="M4 340 L140 250 L260 330 L390 210 L520 300 L650 190 L796 300" stroke="#8aaae5" stroke-width="3" fill="none" opacity="0.4" stroke-dasharray="10 8"/>
+  <text x="400" y="245" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-weight="bold" font-size="64" fill="#ffffff">Sky Rush</text>
+  <text x="400" y="300" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="24" fill="#ffc371">Real-time multiplayer crash game</text>
+  <text x="400" y="470" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="17" fill="#b9b3d9">React &#8226; Next.js &#8226; Socket.IO &#8226; PostgreSQL &#8226; Supabase</text>
+</svg>

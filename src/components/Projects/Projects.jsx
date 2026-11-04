@@ -21,9 +21,31 @@ import AssetHub from '../images/AssetHub.png';
 import frontenddev from '../images/frontenddev.png';
 import solanaaid from '../images/solanaaid.png';
 import jumpstart from '../images/jumpstart.png';
+import SkyRush from '../images/skyrush.svg';
+import BidBuzz from '../images/bidbuzz.svg';
 
 // Web projects
 const webItem = [
+  {
+    // TODO: replace GitHub link + screenshot when the repo/live URL is available
+    link: 'https://github.com/Frrz23?tab=repositories',
+    title: 'Sky Rush',
+    techStack: 'Tech Stack: React, Node.js, Express, Next.js, Socket.IO, Prisma, PostgreSQL, Supabase, Tailwind CSS',
+    desc: 'A real-time multiplayer crash-style game platform (virtual coins only) with live game rounds over WebSockets, user accounts, wallet and bet-history tracking, and an admin dashboard.',
+    image: SkyRush,
+    color: '#241a52',
+    githubLink: 'https://github.com/Frrz23?tab=repositories'
+  },
+  {
+    // TODO: replace GitHub link + screenshot when the repo/live URL is available
+    link: 'https://github.com/Frrz23?tab=repositories',
+    title: 'Bid Buzz',
+    techStack: 'Tech Stack: ASP.NET MVC, C#, EF Core, SignalR, Hangfire',
+    desc: 'An online auction platform with real-time bidding, manual/automated bids, and admin-controlled item approvals and auction schedules.',
+    image: BidBuzz,
+    color: '#e6f7f2',
+    githubLink: 'https://github.com/Frrz23?tab=repositories'
+  },
   {
     link: 'https://github.com/Frrz23/GundrukReads',
     title: 'GundrukReads',
@@ -35,7 +57,7 @@ const webItem = [
   },
   {
     link: 'https://github.com/Frrz23/Quillia',
-    title: 'Quillia-BookStrore',
+    title: 'Quillia-BookStore',
     techStack: 'Tech Stack: ASP.NET MVC, Bootstrap, C#, EF Core',
     desc: 'Quillia is an e-commerce website dedicated to showcasing and selling books across various genres',
     image: Quillia,
@@ -44,7 +66,7 @@ const webItem = [
   },
   {
     link: 'https://github.com/MiniEnemy/Futsal-Website/',
-    title: 'Elite Strike: Futsal Boking System',
+    title: 'Elite Strike: Futsal Booking System',
     techStack: 'Tech Stack- HTML, CSS, JS, PHP, MySQL',
     desc: 'Developing a user-friendly Futsal Booking System to simplify court reservations. Features real-time availability, customizable user profiles, and an admin dashboard for venue management',
     image: Futsal,
@@ -64,7 +86,7 @@ const webItem = [
     link: 'https://github.com/MiniEnemy/Trash-Track-',
     title: 'TrashTrack - Smart Waste Management System',
     techStack: 'Tech Stack: ASP.NET Core MVC, Razor Pages, SQL Server, ASP.NET Identity, Bootstrap',
-    desc: 'TrashTrack is a municipal waste tracking system that provides real-time pickup schedule visibility, issue reporting, and admin overrides to improve coordination between the public and garbage collectors.',
+    desc: 'TrashTrack is a municipal waste tracking system that provides real-time pickup schedule visibility, issue reporting, and admin overrides to improve coordination between the public and garbage collectors. Won 3rd place at BernHack.',
     image: TrashTrack,
     color: '#d9f1ff',
     githubLink: 'https://github.com/MiniEnemy/Trash-Track-'

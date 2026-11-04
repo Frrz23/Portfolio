@@ -24,10 +24,11 @@ export default function Interest() {
             initiallyVisible={true}
           > */}
         <div className={classes.web}>
-          <h3>Programming Knowledge</h3>
+          <h3>Backend Development</h3>
           <p>
-            I have a solid foundation in programming and have worked with languages like
-            <b>C#, PHP, Python, Java, and JavaScript</b>.
+            Building <b>REST APIs</b> and full applications with <b>ASP.NET Core</b>,{' '}
+            <b>ASP.NET MVC</b>, <b>C#</b>, <b>Node.js</b>, Express, PHP, and{' '}
+            <b>ASP.NET Identity</b> authentication.
           </p>
         </div>
         {/* </ScrollAnimation>
@@ -39,8 +40,8 @@ export default function Interest() {
             initiallyVisible={true}
           > */}
         <div className={classes.app}>
-          <h3>Web Development</h3>
-          <p>HTML/ CSS, ReactJs, Tailwind CSS,ASP.NET MVC,Bootstrap</p>
+          <h3>Frontend Development</h3>
+          <p>React.js, Next.js, JavaScript, HTML/CSS, Tailwind CSS, Bootstrap</p>
         </div>
         {/* </ScrollAnimation>
           <ScrollAnimation
@@ -51,16 +52,16 @@ export default function Interest() {
             initiallyVisible={true}
           > */}
         <div className={classes.other}>
-          <h3>Database Management</h3>
-          <p>SQl, Entity Framework, LINQ, MySQL</p>
+          <h3>Databases</h3>
+          <p>SQL Server, MySQL, PostgreSQL, Supabase, Entity Framework Core, Prisma, LINQ</p>
         </div>
         <div className={classes.other}>
-          <h3>Frameworks & Libraries</h3>
-          <p>ASP.NET Core (ABP), React.js, jQuery, Tailwind CSS, Bootstrap, NPOI, MailKit</p>
+          <h3>Real-Time &amp; Libraries</h3>
+          <p>SignalR, Socket.IO, Hangfire, ABP Framework, NPOI, MailKit</p>
         </div>
         <div className={classes.other}>
-          <h3>Tools & DevOps</h3>
-          <p>Git, GitHub, Postman, Swagger, Visual Studio, VS Code</p>
+          <h3>Tools &amp; Practices</h3>
+          <p>Git, GitHub, Agile, Code Reviews, Debugging, Performance Optimization, Swagger, Visual Studio, VS Code</p>
         </div>
 
         {/* </ScrollAnimation> */}
