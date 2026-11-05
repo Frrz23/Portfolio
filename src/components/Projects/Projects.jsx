@@ -21,30 +21,26 @@ import AssetHub from '../images/AssetHub.png';
 import frontenddev from '../images/frontenddev.png';
 import solanaaid from '../images/solanaaid.png';
 import jumpstart from '../images/jumpstart.png';
-import SkyRush from '../images/skyrush.svg';
-import BidBuzz from '../images/bidbuzz.svg';
+import SkyRush from '../images/skyrush.png';
+import Shah from '../images/shah.svg';
 
 // Web projects
 const webItem = [
   {
-    // TODO: replace GitHub link + screenshot when the repo/live URL is available
-    link: 'https://github.com/Frrz23?tab=repositories',
+    link: 'https://skyrush.fun/',
     title: 'Sky Rush',
     techStack: 'Tech Stack: React, Node.js, Express, Next.js, Socket.IO, Prisma, PostgreSQL, Supabase, Tailwind CSS',
     desc: 'A real-time multiplayer crash-style game platform (virtual coins only) with live game rounds over WebSockets, user accounts, wallet and bet-history tracking, and an admin dashboard.',
     image: SkyRush,
-    color: '#241a52',
-    githubLink: 'https://github.com/Frrz23?tab=repositories'
+    color: '#241a52'
   },
   {
-    // TODO: replace GitHub link + screenshot when the repo/live URL is available
-    link: 'https://github.com/Frrz23?tab=repositories',
-    title: 'Bid Buzz',
+    link: 'https://github.com/Frrz23/BidBuzz',
+    title: 'SHAH',
     techStack: 'Tech Stack: ASP.NET MVC, C#, EF Core, SignalR, Hangfire',
     desc: 'An online auction platform with real-time bidding, manual/automated bids, and admin-controlled item approvals and auction schedules.',
-    image: BidBuzz,
-    color: '#e6f7f2',
-    githubLink: 'https://github.com/Frrz23?tab=repositories'
+    image: Shah,
+    color: '#e6f7f2'
   },
   {
     link: 'https://github.com/Frrz23/GundrukReads',
@@ -80,7 +76,7 @@ const webItem = [
     desc: 'AssetHub is a full-featured asset management system with Excel support, approval flows, audit logging, dashboard analytics, and email notifications.',
     image: AssetHub,
     color: '#fff3c7',
-    githubLink: 'https://github.com/Frrz23/AssetHub-Backend'
+    githubLink: 'https://github.com/Frrz23/AssetHub'
   },
   {
     link: 'https://github.com/MiniEnemy/Trash-Track-',
@@ -103,7 +99,8 @@ export default function Projects() {
           </a>
           <div
             onClick={() => {
-              if (cardItem?.githubLink) window.open(cardItem?.githubLink, '_blank');
+              const target = cardItem?.githubLink ?? cardItem?.link;
+              if (target) window.open(target, '_blank');
             }}
             className={classes.card__title__container}
           >
