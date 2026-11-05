@@ -104,4 +104,4 @@ export const CERTIFICATIONS = [
 // Cloudflare Worker endpoint. When the Worker is deployed, paste its URL here,
 // for example: 'https://aryan-portfolio-chat.<your-subdomain>.workers.dev/chat'
 // An empty string means the chat runs fully offline using the built-in fallback engine.
-export const CHAT_API_URL = '';
+export const CHAT_API_URL = 'https://aryan-portfolio-chat.aryankhatiwoda9.workers.dev/chat';
