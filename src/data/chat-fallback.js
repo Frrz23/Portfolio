@@ -17,11 +17,51 @@ const normalise = (text) =>
     .replace(/\s+/g, ' ')
     .trim();
 
-// Whole-word matching on a space-padded string, so "hi" never matches "this".
+// Whole-word matching on a space-padded string, with fuzzy tolerance so common
+// typos ('exprence', 'conatct', 'skils') still match the right intent.
+function editDistance(a, b, max) {
+  if (Math.abs(a.length - b.length) > max) return max + 1;
+  const rows = [new Array(b.length + 1).fill(0), new Array(b.length + 1).fill(0)];
+  for (let j = 0; j <= b.length; j++) rows[0][j] = j;
+  for (let i = 1; i <= a.length; i++) {
+    rows[i % 2][0] = i;
+    for (let j = 1; j <= b.length; j++) {
+      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+      rows[i % 2][j] = Math.min(
+        rows[(i - 1) % 2][j] + 1,
+        rows[i % 2][j - 1] + 1,
+        rows[(i - 1) % 2][j - 1] + cost
+      );
+    }
+  }
+  return rows[a.length % 2][b.length];
+}
+
+// Tolerance grows with word length: 1-4 letters exact only, 5-6 allow 1 typo,
+// longer words allow 2 typos — keeps short words like 'hi'/'who'/'pay' strict.
+function wordMatches(textWord, keyword) {
+  if (textWord === keyword) return true;
+  const maxD = keyword.length > 6 ? 2 : keyword.length > 4 ? 1 : 0;
+  if (maxD === 0) return false;
+  if (Math.abs(textWord.length - keyword.length) > maxD) return false;
+  return editDistance(textWord, keyword, maxD) <= maxD;
+}
+
 const score = (text, keywords) => {
   const padded = ` ${text} `;
+  const words = text.split(' ');
   return keywords.reduce(
-    (acc, kw) => acc + (padded.includes(` ${kw} `) ? (kw.includes(' ') ? 2 : 1) : 0),
+    (acc, kw) => {
+      if (kw.includes(' ')) {
+        // Multi-word keyword: allow a typo inside each part
+        const parts = kw.split(' ');
+        const hit = padded.includes(` ${kw} `) || parts.every((p) => words.some((w) => wordMatches(w, p)));
+        return acc + (hit ? 2 : 0);
+      }
+      const hit =
+        padded.includes(` ${kw} `) || (kw.length > 4 && words.some((w) => wordMatches(w, kw)));
+      return acc + (hit ? 1 : 0);
+    },
     0
   );
 };
@@ -105,8 +145,18 @@ export function offlineAnswer(message) {
     return "I didn't catch that — ask me anything about Aryan's work, skills or projects.";
   }
 
-  // Direct project lookup (e.g. "tell me about Sky Rush")
-  const project = PROJECTS.find((p) => ` ${text} `.includes(` ${normalise(p.name)} `));
+  // Direct project lookup (e.g. "tell me about Sky Rush" — typos tolerated)
+  const project = PROJECTS.find((p) => {
+    // split camelCase names (e.g. 'TrashTrack' -> 'trash track') before comparing
+    const nameWords = normalise(p.name.replace(/([a-z0-9])([A-Z])/g, '$1 $2')).split(' ');
+    const textWords = text.split(' ');
+    const condensedText = text.replace(/ /g, '');
+    const condensedName = normalise(p.name).replace(/ /g, '');
+    const matched = condensedText.includes(condensedName)
+      ? true
+      : nameWords.every((nw) => text.includes(` ${nw} `) || textWords.some((w) => nw.length >= 3 && w.length >= 2 && editDistance(w, nw, 1) <= 1));
+    return matched;
+  });
   if (project) {
     const extra = profileLookup(text);
     return `${project.name}\n${project.desc}\nStack: ${project.stack}${extra ? `\n\n${extra}` : ''}`;
@@ -118,8 +168,11 @@ export function offlineAnswer(message) {
     .filter((x) => x.s > 0)
     .sort((a, b) => b.s - a.s);
 
-  const strong = scored.filter((x) => x.intent.name !== 'greeting' && x.intent.name !== 'thanks');
-  const top = strong.length ? strong.slice(0, 2) : scored.slice(0, 1);
+  const noise = new Set(['greeting', 'thanks', 'whoami']);
+  const specific = scored.filter((x) => !noise.has(x.intent.name));
+  // If a concrete topic matched (experience/skills/projects/contact...), prefer it
+  // over the generic "tell me about..." intent even when its score is higher.
+  const top = specific.length ? specific.slice(0, 2) : scored.slice(0, 2);
 
   if (!top.length) {
     // Last resort: quote the CV lines that share words with the question.
