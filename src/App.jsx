@@ -7,6 +7,7 @@ import Education from './components/Education/Education.jsx';
 import Interest from './components/skills/Interest.jsx';
 import Projects from './components/Projects/Projects.jsx';
 import CarouselImages from './components/Carousel/Carousel.jsx';
+import Chatbot from './components/Chatbot/Chatbot.jsx';
 
 class App extends Component {
   render() {
@@ -36,6 +37,7 @@ class App extends Component {
             <Interest />
             <Education />
           </div>
+          <Chatbot />
         </div>
       </Router>
     );

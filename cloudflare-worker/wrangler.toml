@@ -1,0 +1,7 @@
+name = "aryan-portfolio-chat"
+main = "worker.js"
+compatibility_date = "2026-01-01"
+
+# Workers AI binding — free daily allocation is enough for portfolio traffic.
+[ai]
+binding = "AI"
