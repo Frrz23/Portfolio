@@ -7,7 +7,7 @@
 .head {
   display: inline-block;
   padding: 0px 12px;
-  color: rgb(85, 85, 85);
+  color: var(--head-text);
   margin-bottom: 20px;
   margin-left: 30px;
   letter-spacing: 5px;

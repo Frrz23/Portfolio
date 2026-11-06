@@ -3,7 +3,6 @@ import classes from './Education.module.css';
 // import ScrollAnimation from 'react-animate-on-scroll';
 import 'animate.css/animate.min.css';
 import { MdSchool } from 'react-icons/md';
-import { MdWork } from 'react-icons/md';
 import { FaSchool } from 'react-icons/fa';
 import { FaUserGraduate } from "react-icons/fa";
 import { FaTrophy } from "react-icons/fa";
@@ -85,18 +84,7 @@ class Education extends Component {
                     </div>
                     <div className={classes.label}>
                       <h2>Bachelor In Computer Application <span>2021-2026</span></h2>
-                      <div className={classes.description}>Graduated with my Bachelor's degree from <b>Bernhardt College, Tribhuvan University</b> (April 2021 – April 2026), Kathmandu, Nepal.</div>
-                    </div>
-                  </article>
-                  <article className={classes.timeline_entry}>
-                    <div className={classes.timeline_icon}>
-                      <MdWork />
-                    </div>
-                    <div className={classes.label}>
-                      <h2>Intern → Associate Software Engineer — AMNIL Technologies <span>Sep 2025 – Apr 2026</span></h2>
-                      <div className={classes.description}>
-                        Designed and developed <b>RESTful APIs</b> with <b>ASP.NET Core</b> and C# for internal and client-facing applications. Modelled data with <b>SQL Server</b> and <b>Entity Framework Core</b>, built real-time features and background jobs, optimized backend performance, and shipped features with cross-functional teams using Git and Agile practices.
-                      </div>
+                      <div className={classes.description}>Graduated with my Bachelor's degree from <b>Bernhardt College, Tribhuvan University</b> (April 2021 – April 2026), Kathmandu, Nepal. Professional work experience is detailed in the <b>Experience</b> section.</div>
                     </div>
                   </article>
                   <article className={classes.timeline_entry}>

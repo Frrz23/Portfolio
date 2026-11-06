@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import './Sidebar.css';
 import { HashLink as Link } from 'react-router-hash-link';
 import { motion } from 'framer-motion';
+import { FaMoon, FaSun } from 'react-icons/fa';
 
 import logo from '../images/Profile.jpg';
 import github from '../images/github.png';
@@ -11,6 +12,18 @@ import linkedin from '../images/linkedin.png';
 import gmail from '../images/gmail.png';
 
 export default function Sidebar() {
+  const [theme, setTheme] = useState(document.documentElement.dataset.theme || 'light');
+
+  const toggleTheme = () => {
+    // Read the live value (source of truth) so rapid clicks never desync.
+    const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = next;
+    try {
+      localStorage.setItem('theme', next);
+    } catch (e) {}
+    setTheme(next);
+  };
+
   const container = {
     hidden: { opacity: 1, scale: 0 },
     visible: {
@@ -61,7 +74,7 @@ export default function Sidebar() {
       >
         <img src={logo} className='my-img' />
       </motion.div>
-      <p style={{ color: 'black', fontWeight: 'bold' }} className='gmail'>
+      <p style={{ color: 'var(--text)', fontWeight: 'bold' }} className='gmail'>
         <a
           href='https://mail.google.com/mail/u/0/#inbox?compose=CllgCJftvBffjPmxWxvfHWRHWnhTbpQgPxBxvkcnPpFpFqbhrXMCHXSJTsCXCVLsQzgRcVLpnPL'
           rel='opener noreferrer'
@@ -70,14 +83,14 @@ export default function Sidebar() {
         ></a>
         &nbsp;aryankhatiwoda9@gmail.com
       </p>
-      <p style={{ color: 'black', fontWeight: 'bold' }} className='gmail'>
+      <p style={{ color: 'var(--text)', fontWeight: 'bold' }} className='gmail'>
         <a
           href='tel:+9779818821006'
           className='fa fa-phone'
         ></a>
         &nbsp;+977 9818821006
       </p>
-      <p style={{ color: 'black', fontWeight: 'bold' }} className='gmail'>
+      <p style={{ color: 'var(--text)', fontWeight: 'bold' }} className='gmail'>
         <i className='fa fa-map-marker' style={{ marginLeft: '4px' }}></i>
         &nbsp;Kathmandu, Nepal
       </p>
@@ -86,6 +99,11 @@ export default function Sidebar() {
         <li className='sidebar-nav-items'>
           <Link smooth to='/#projects' className='links'>
             Projects
+          </Link>
+        </li>
+        <li className='sidebar-nav-items'>
+          <Link smooth to='/#experience' className='links'>
+            Experience
           </Link>
         </li>
         <li className='sidebar-nav-items'>
@@ -120,6 +138,23 @@ export default function Sidebar() {
           ))}
         </motion.ul>
       </div>
+
+      <button
+        className='themeToggle'
+        onClick={toggleTheme}
+        aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+        title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+      >
+        <motion.span
+          key={theme}
+          initial={{ rotate: -90, opacity: 0 }}
+          animate={{ rotate: 0, opacity: 1 }}
+          transition={{ duration: 0.25 }}
+          style={{ display: 'inline-flex' }}
+        >
+          {theme === 'dark' ? <FaSun /> : <FaMoon />}
+        </motion.span>
+      </button>
     </div>
   );
 }

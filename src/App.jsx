@@ -7,6 +7,7 @@ import Education from './components/Education/Education.jsx';
 import Interest from './components/skills/Interest.jsx';
 import Projects from './components/Projects/Projects.jsx';
 import CarouselImages from './components/Carousel/Carousel.jsx';
+import Experience from './components/Experience/Experience.jsx';
 import Chatbot from './components/Chatbot/Chatbot.jsx';
 
 class App extends Component {
@@ -33,6 +34,7 @@ class App extends Component {
           <div className='main'>
             <CarouselImages />
             <Projects />
+            <Experience />
             <About />
             <Interest />
             <Education />

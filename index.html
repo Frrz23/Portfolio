@@ -3,6 +3,22 @@
 
 <head>
   <meta charset="utf-8" />
+  <script>
+    // Apply theme before first paint: saved preference wins, else system preference.
+    (function () {
+      var saved = null;
+      try {
+        saved = localStorage.getItem('theme');
+      } catch (e) {}
+      var theme =
+        saved === 'dark' || saved === 'light'
+          ? saved
+          : window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+            ? 'dark'
+            : 'light';
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
   <link rel="shortcut icon" href="" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
