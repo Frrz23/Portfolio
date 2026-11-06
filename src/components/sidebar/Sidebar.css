@@ -82,7 +82,7 @@ ul {
   transition: all 0.3s ease-in-out;
 }
 
-:global([data-theme='dark']) .links {
+[data-theme='dark'] .links {
   background-image: linear-gradient(to right, #fff, #fff, #fff);
 }
 
@@ -108,6 +108,9 @@ ul {
 .icon-img:hover {
   scale: 1.2;
   cursor: pointer;
+}
+.icon-img-dark-fix {
+  filter: invert(1) brightness(1.75);
 }
 .heart {
   color: red;

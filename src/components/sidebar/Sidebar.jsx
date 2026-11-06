@@ -38,16 +38,18 @@ export default function Sidebar() {
   const iconList = [
     {
       component: github,
-      href: 'https://github.com/Frrz23'
+      href: 'https://github.com/Frrz23',
+      className: 'icon-img icon-img-dark-fix'
     },
     {
       component: linkedin,
-      href: 'https://www.linkedin.com/in/aryan-khatiwoda'
+      href: 'https://www.linkedin.com/in/aryan-khatiwoda',
+      className: 'icon-img'
     },
-    
     {
       component: gmail,
-      href: 'mailto:aryankhatiwoda9@gmail.com'
+      href: 'mailto:aryankhatiwoda9@gmail.com',
+      className: 'icon-img'
     }
   ];
   const item = {
@@ -132,7 +134,7 @@ export default function Sidebar() {
                   window.open(val.href, '_blank');
                 }}
                 src={val.component}
-                className='icon-img'
+                className={val.className || 'icon-img'}
               />
             </motion.li>
           ))}
